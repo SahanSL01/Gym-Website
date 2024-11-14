@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        About us
+    </title>
+    <style>
+        *
+
+        /* Google Fonts - Poppins */
+            {
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+        :root {
+            --color-yellow: hsl(56, 99%, 52%);
+            --color-yellow-dark: hsl(56, 99%, 32%);
+            --color-yellow-light: hsl(56, 99%, 82%);
+            --color-black: hsl(0, 0%, 15%);
+            --color-black-light: hsl(0, 0%, 22%);
+            --color-red: hsl(359, 77%, 56%);
+            --color-light-green: #9fff04;
+            --color-dark-green: #76a100fc;
+            --grid-column-gap: clamp(2rem, 6vw, 8rem);
+            --grid-row-gap: 4rem;
+            --two-col-layout: 2;
+            --three-col-layout: 3;
+        }
+
+        @media only screen and (max-width: 56.25em) {
+            :root {
+                --two-col-layout: 1;
+            }
+        }
+
+        @media only screen and (max-width: 59em) {
+            :root {
+                --three-col-layout: 2;
+            }
+        }
+
+        @media only screen and (max-width: 37.5em) {
+            :root {
+                --three-col-layout: 1;
+            }
+        }
+
+
+        *,
+        *::before,
+        *::after {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: #ffffff;
+            overflow-y: scroll;
+        }
+
+        .container {
+            max-width: clamp(50rem, 85vw, 114rem);
+            padding: 0 2.4rem;
+            margin: 0 auto;
+
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--color-black-light);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--color-black-light);
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #fff;
+            width: 100%;
+            z-index: 100;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+        }
+
+        .yellow {
+            color: var(--color-light-green);
+        }
+
+        .member {
+            background-color: var(--color-light-green);
+
+            border-radius: 15px;
+            margin-left: 10px;
+            padding: 1px 25px 1px 0px;
+
+        }
+
+        .member:hover {
+            background-color: var(--color-dark-green);
+        }
+
+        #offer a {
+            color: var(--color-black);
+        }
+
+
+        .header-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+        }
+
+        .header-navigation ul {
+            display: flex;
+            text-transform: capitalize;
+            font-size: 1.7rem;
+            list-style: none;
+            font-weight: 700;
+        }
+
+        @media only screen and (max-width: 50em) {
+            .header-navigation ul {
+                display: none;
+            }
+        }
+
+        .header-navigation ul li {
+            padding-left: 2.8rem;
+        }
+
+        .header-navigation ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 1.1rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border 0.5s;
+        }
+
+        .header-navigation ul li a:hover {
+            border-bottom: 2px solid var(--color-light-green);
+        }
+
+        .header-navigation .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .header-navigation .nav-icon {
+            display: none;
+            border: 0px solid #fff;
+            grid: area 1px;
+            ;
+        }
+
+        @media only screen and (max-width: 50em) {
+            .header-navigation .nav-icon {
+                display: block;
+            }
+        }
+
+        /* < !--Aboutus--> */
+        .aboutus {
+            font-family: 'Lato' sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+
+        .abouttext {
+            font-family: 'Lato' sans-serif;
+            color: aliceblue;
+            text-align: justify;
+        }
+
+        .ourmission {
+            font-family: 'Lato' sans-serif;
+            color: rgb(255, 247, 5);
+            text-align: center;
+        }
+
+        .ourmissiontext {
+            font-family: 'Lato' sans-serif;
+            color: rgb(255, 255, 255);
+            text-align: justify;
+        }
+
+        .fristupper {
+            height: 80%;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .secondupper {
+            height: 100%;
+            color: rgb(255, 255, 255);
+        }
+
+        .ourvalues {
+            font-family: sans-serif;
+            color: rgb(250, 216, 21);
+            text-align: center;
+        }
+
+        .mainbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            max-width: 50%;
+            margin: auto;
+            height: 100%;
+        }
+
+        .firstpart {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .secondpart {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .listone {
+            text-align: justify;
+            color: black;
+            font-family: sans-serif;
+        }
+
+        .lilist {
+            text-align: justify;
+            color: rgb(254, 254, 254);
+            font-family: sans-serif;
+        }
+
+        #lid {
+            text-align: justify;
+            color: rgb(255, 246, 246);
+            font-family: sans-serif;
+        }
+
+
+        /* footer */
+        .contact-details .contact-data {
+            list-style: none;
+            display: flexbox;
+            flex-direction: column;
+        }
+
+        .contact-details .contact-data * {
+            padding: 0.4rem 0;
+        }
+
+        .contact-details .contact-data .social {
+            display: flex;
+        }
+
+        .contact-details .contact-data .social * {
+            padding-right: 1rem;
+        }
+
+        .footer-nav .nav-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-nav ul li {
+            list-style: none;
+            padding: 1.5rem 0;
+        }
+
+        .footer-nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .footer-nav ul li a::before {
+            content: '\2192';
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: -4px;
+            color: var(--color-light-green);
+        }
+
+        .newsletter__title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter__text {
+            margin-bottom: 1.6rem;
+        }
+
+        .newsletter__input {
+            display: flex;
+        }
+
+        .send-icon {
+            padding: 0.9rem;
+            background-color: #000;
+            cursor: pointer;
+        }
+
+        .legel {
+            border-top: 2px solid #fff;
+            padding: 1.5rem 0;
+            grid-column: 1/-1;
+            text-align: center;
+        }
+
+        .legel .text {
+            padding: 1rem 0;
+        }
+
+        .grid-center {
+            grid-column: 1/-1;
+            text-align: center;
+        }
+
+        .margin-right {
+            margin-right: 2rem;
+        }
+
+        .margin-bottom {
+            margin-bottom: 2rem;
+        }
+
+        .form-grp {
+            display: grid;
+            row-gap: 3rem;
+            padding: 4rem 2.4rem;
+        }
+
+
+        .link-button {
+            text-decoration: none;
+            padding: 0.5rem 0;
+            color: #fff;
+            border-bottom: 2px solid var(--color-light-green);
+        }
+
+        .link-button:hover {
+            font-style: italic;
+        }
+
+        .form {
+            padding: 0.8rem clamp(1rem, 3vw, 3rem);
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 1.6rem;
+            border: none;
+            width: 100%;
+        }
+
+        .form:focus {
+            outline: none;
+        }
+
+        .form__input {
+            border-bottom: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            resize: none;
+        }
+
+        .form__input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+
+
+        .section-footer {
+            background-color: var(--color-black);
+            padding: clamp(4rem, 10vw, 12rem) 21.5rem;
+            align-items: center;
+
+        }
+
+        .footer-box {
+            display: grid;
+            grid-template-columns: repeat(var(--three-col-layout),
+                    minmax(min-content, 1fr));
+            column-gap: var(--grid-column-gap);
+            row-gap: var(--grid-row-gap);
+            color: #fff;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header" id="home">
+        <div class="container">
+            <nav class="header-navigation" aria-label="navigation">
+                <div class="logo"><span class="yellow">Universal </span>| Fitness</div>
+
+                <img src="img/nav-icon.svg" alt="navigation icon" class="nav-icon" width="30" height="30" />
+
+                <ul>
+                    <li>
+                        <a href="../index.php">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="../index.php#courses">Courses</a>
+                    </li>
+                    <li>
+                        <a href="../index.php#trainers">Trainers</a>
+                    </li>
+                    <li>
+                        <a href="../index.php#contact">Contact</a>
+                    </li>
+                    <li class="">
+                        <a href="../Member/Become Member.php">Member</a>
+                    </li>
+                    <li class="member">
+                        <a href="../Admin-Panel/login.php">Admin</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br /><br />
+
+    <section class="background fristupper">
+        <div class="mainbox">
+            <div class="fristpart">
+                <br />
+
+                <h2 class="aboutus">About Us</h2><br />
+                <p class="abouttext">Welcome to Universal Fitness! We are a fitness center dedicated to helping our
+                    members reach their fitness goals.
+                    We offer a wide variety of equipment and classes, so you can find the perfect workout for your
+                    needs.
+                    Our experienced staff is always available to help you get the most out of your workout.</p>
+
+                <br />
+
+                <p class="abouttext">We believe that fitness is more than just looking good.
+                    It's about feeling good, both physically and mentally.
+                    That's why we offer a supportive and welcoming environment where everyone can feel comfortable
+                    working out.
+                    We're here to help you reach your goals, whatever they may be.</p>
+
+                <br />
+
+                <h2 class="ourmission">Our Mission</h2><br />
+                <p class="ourmissiontext">Our mission is to help people achieve their fitness goals and live healthier
+                    lives.
+                    We believe that everyone deserves to feel good about themselves, both inside and out.
+                    That's why we offer a variety of fitness programs and services that are designed to meet the needs
+                    of everyone from beginners to experienced athletes.</p>
+            </div>
+        </div>
+        <br />
+    </section>
+    </section>
+
+    <section clss="background secondupper">
+        <div class="mainbox">
+            <br /><br />
+            <div class="secondpart">
+                <br />
+                <h2 class="ourvalues">Our Values</h2>
+                <ul>
+                    <br />
+                    <li id="lid">We are committed to providing our members with a safe and supportive environment.</li>
+                    <br />
+                    <li id="lid">We belive that fitness is more than just looking good. it's about feeling good and
+                        physical and mental health.</li>
+                    <br />
+                    <li id="lid">We are passionate about helping people reach their fitness goals.</li>
+                    <br />
+                    <li id="lid">We are committed to providing our members with the best possible service.</li>
+                    <br />
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section-footer" id="footer">
+        <div class="footer-box container">
+            <div class="contact-details">
+                <h2 class="margin-bottom"><span class="yellow">Universal </span>Fitness</h2>
+
+                <ul class="contact-data">
+                    <li class="location">100 Nugegoda, Sri Lanka</li>
+                    <li class="phone">+9411 4505500</li>
+                    <li class="email">Universal@Fitness.com</li>
+                    <li class="social">
+                        <img src="logo-whatsapp.svg" alt="whatsapp icon" width="35" height="35" />
+
+                        <img src="logo-facebook.svg" alt="facebook icon" width="35" height="35" />
+
+                        <img src="logo-instagram.svg" alt="instagram icon" width="35" height="35" />
+
+                        <img src="logo-twitter.svg" alt="twitter icon" width="35" height="35" />
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="footer-nav" aria-label="navigation">
+                <div class="nav-name">Quick Links</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#trainers">Trainers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="newsletter">
+                <div class="newsletter__title">News Letter</div>
+                <div class="newsletter__text">
+                    Want to Know what we're up to? Sign up for the newslatter,
+                    and join oure tribe.
+                </div>
+                <form class="newsletter__input">
+                    <input type="text" class="form" placeholder="Universal@Fitness.com" />
+                    <img src="send.svg" alt="send icon" class="send-icon" width="36" height="36" />
+                </form>
+            </div>
+
+            <div class="legel">
+                <p class="text">Copyright &copy; 2023 Universal Fitness All Rights Reserved&nbsp;</p>
+                <a href="">
+                    <img src="foot.png" alt="" class="github" width="35" height="35" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

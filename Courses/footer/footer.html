@@ -1,0 +1,88 @@
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollLeft: target.offset().left
+        }, 1000);
+    }
+});
+
+$(window).on('scroll', function() {
+    $('.target').each(function() {
+        if($(window).scrollLeft() >= $(this).offset().left) {
+            var id = $(this).attr('id');
+            $('header ul li a').removeClass('active');
+            $('header ul li a[href="#'+ id +'"]').addClass('active');
+        }
+    });
+});
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+<body>
+
+        <!-- FOOTER -->
+        <footer class="section-footer" id="footer">
+            <div class="footer-box container">
+                <div class="contact-details">
+                    <h2 class="margin-bottom"><span class="yellow">Universal </span>Fitness</h2>
+    
+                    <ul class="contact-data">
+                        <li class="location">100 Nugegoda, Sri Lanka</li>
+                        <li class="phone">+9411 4505500</li>
+                        <li class="email">Universal@Fitness.com</li>
+                        <li class="social">
+                            <img src="logo-whatsapp.svg" alt="whatsapp icon" width="35" height="35" />
+    
+                            <img src="logo-facebook.svg" alt="facebook icon" width="35" height="35" />
+    
+                            <img src="logo-instagram.svg" alt="instagram icon" width="35" height="35" />
+    
+                            <img src="logo-twitter.svg" alt="twitter icon" width="35" height="35" />
+                        </li>
+                    </ul>
+                </div>
+    
+                <nav class="footer-nav" aria-label="navigation">
+                    <div class="nav-name">Quick Links</div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="newsletter">
+                    <div class="newsletter__title">News Letter</div>
+                    <div class="newsletter__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+                        nisi!
+                    </div>
+                    <form class="newsletter__input">
+                        <input type="text" class="form" placeholder="Universal@Fitness.com" />
+                        <img src="send.svg" alt="send icon" class="send-icon" width="36" height="36" />
+                    </form>
+                </div>
+    
+                <div class="legel">
+                    <p class="text">Copyright &copy; 2023 Universal Fitness All Rights Reserved&nbsp;</p>
+                    <a href="">
+                        <img src="" alt="" class="github" width="35" height="35" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+</html>

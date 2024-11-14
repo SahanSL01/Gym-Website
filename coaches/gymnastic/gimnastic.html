@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>our gimnastic coaches</title>
+  <link rel="stylesheet" href="test.css">
+
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="home">
+    <div class="container">
+      <nav class="header-navigation" aria-label="navigation">
+        <div class="logo"><span class="yellow">Universal </span>| Fitness</div>
+
+        <img src="img/nav-icon.svg" alt="navigation icon" class="nav-icon" width="30" height="30" />
+
+        <ul>
+          <li>
+            <a href="../../index.php">Home</a>
+          </li>
+          <li>
+            <a href="../../AboutUs/About us second part.html">About</a>
+          </li>
+          <li>
+            <a href="../../index.php#courses">Courses</a>
+          </li>
+          <li>
+            <a href="../../index.php#trainers">Trainers</a>
+          </li>
+          <li>
+            <a href="../../index.php#contact">Contact</a>
+          </li>
+          <li class="">
+            <a href="../../Member/Become Member.php">Member</a>
+          </li>
+          <li class="member">
+            <a href="../../Admin-Panel/login.php">Admin</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</body>
+
+<body style="background-color:#262626;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #15317E;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #262626;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #262626;
+      color: white;
+    }
+
+    .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      border: none;
+      font-size: 17px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a,
+      .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid black;
+      }
+    }
+  </style>
+
+
+  <style>
+    #app {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      padding-bottom: 4vmin;
+      height: 90vh;
+      width: 100%;
+      background: #262626;
+      color: white;
+      font-family: Cambria;
+    }
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+    .title {
+      padding-left: 1em;
+
+
+
+      font-family: Georgia, serif;
+      font-size: 9vw;
+
+      width: 100%;
+      z-index: 2;
+
+      // start
+
+      >.title-inner {
+        display: inline-block;
+      }
+    }
+
+    @keyframes text-clip {
+      from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
+
+      to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    @keyframes outer-left {
+      from {
+        transform: translateX(50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    @keyframes inner-left {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    .cafe,
+    .mozart {
+      animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+      // outline: 1px solid red;
+    }
+
+    // [class*='inner'] {
+    //   outline: 1px solid blue;
+    // }
+
+    .title-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both;
+    }
+
+    .cafe-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both,
+        text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .mozart-inner {
+      animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .title {
+      animation: outer-left 1s 1s ease both;
+    }
+
+    .cafe {
+
+      // start
+      >.cafe-inner {
+        display: inline-block;
+      }
+    }
+
+    .mozart {
+      display: inline-block;
+    }
+
+    .image {
+      grid-row: 1;
+      grid-column: 2;
+
+      opacity: 0.7;
+
+      animation: image-in 1s cubic-bezier(0.4, 0, 0.1, 1) 2s backwards;
+
+      @keyframes image-in {
+        from {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        to {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      img {
+        display: block;
+        width: 200%;
+        height: auto;
+      }
+    }
+
+    // Replay animation!
+    body:active * {
+      animation: none !important;
+    }
+  </style>
+
+
+
+  <body>
+
+
+    <!-- <div class="iframe-embed" style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"><iframe src="https://dribbble.com/shots/15379368-Quick-Animation-Experiment/player" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="encrypted-media"></iframe></div> -->
+
+    <div id="app">
+      <div class="title">
+        <div class="title-inner">
+          <div class="cafe">
+            <div class="cafe-inner">our</div>
+          </div>
+          <div class="mozart">
+            <div class="mozart-inner">Gimnastic Coaches</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src='2.jpg' alt=''>
+      </div>
+    </div>
+
+    </head>
+
+
+    <style>
+      <hr><style>.services {
+        padding-bottom: 3rem;
+      }
+
+      .services h1 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .services .services-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .services .services-box .box {
+        display: flex;
+        justify-content: space-between;
+        aling-items: center;
+        padding: 1rem 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        align-self: normal;
+        background: red;
+      }
+
+      .services .services-box .box:hover {
+        transform: scale(1.2);
+        z-index: 2;
+      }
+
+      .services .services-box .box .box-content h3 {
+        margin-bottom: .5rem;
+      }
+
+      .services .services-box .box i {
+        margin-right: 1.5rem;
+        color: #D90429;
+      }
+
+      .about {
+        background: #4c4c4c;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
+
+      .about .about-content {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .about .about-content .about-text {
+        flex: 1 1 50%;
+      }
+
+      .about .about-content .about-text h1 {
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+      }
+
+      .about .about-content .about-text p {
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+
+      .about .about-content .about-text a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #ffffff;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        color: #EDF2F4;
+        text-transform: uppercase;
+      }
+
+      .about .about-content .about-text a:hover {
+        background: https: //dminteriors.lk/wp-content/uploads/2020/02/Gym-interior-design-Sri-Lanka.jpg;
+          letter-spacing: .5rem;
+      }
+    </style>
+
+    <section class="hero">
+      <div class="hero-content">
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h1 style="color:white">
+            Mr.Ajith liyanage
+          </h1>
+          <p style="color:white">Ajith is the owner of CW Nutrition & Fitness where he provides workout routines geared
+            to your fitness level. He also provides consultation for healthy and easy recipes which will help you to
+            loose fat, gain muscle and achieve overall well being.He is the grant gimnastic coach of our gym.</p>
+          <div class="text-block">
+            <h4>Telephone
+              General - +94 11189436<br>
+
+              Maritime - +94 112 5480789<br></h4><br>
+            <p style="color:white">Mail - Ajithliyanage@gmail.com<br>
+            </p><br>
+          </div>
+
+        </div>
+        <div class="about-img">
+          <style>
+
+          </style>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc_u9tCpRqBVi6ZJYF720qKzd_YrTXCmQAIIounbRC-AQ0WZd-2dTyxnSre0DjqHT7-Ss&usqp=CAU"
+            alt="">
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <center>
+
+
+      <hr>
+      <style>
+        html {
+          box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .title {
+          color: white;
+        }
+
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .button:hover {
+          background-color: #555;
+        }
+      </style>
+      </head>
+
+      <body>
+
+        <h2 style="color:white">Other Coaches</h2>
+
+        <br>
+
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="supun" style="width:100%">
+              <div class="container">
+                <h2>Amal rasanga</h2>
+
+                <p>Amal is a Personal Trainer and Sports Performance coach from the UK. He also has a bachelor’s degree
+                  in management through Manchester Metropolitan University. But having partaken in numerous sports
+                  through school and university such as boxing, cricket, badminton, football, rugby and basketball, he
+                  decided to pursue his passion and taking a leap into health & fitness industry. Having worked and
+                  studied in the UK, he has had the opportunity to work with and learn from some of the best coaches in
+                  the world.Through this he has been able to in his 10 plus years of being a fitness professional,
+                  worked with athletes in tennis, rugby and football and hundreds of clients, as well as develop and
+                  coach other trainers in the industry. In 2018 he took his experience and approach to performance
+                  driven training and designed his own concept to launch his very own studio in London named Onyx. He is
+                  currently in Sri Lanka offering classes at Trainyard (One Galle Face).
+                </p>
+                <p>Amalrasanga@gmail.com</p>
+                <p>Address: Colombo</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 545 236</option>
+                      <option>0761589</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiGjNcEMJUvQeF-aV3-Fe6AzgB3haRgleAPg&usqp=CAU"
+                alt="Abdullah" style="width:100%">
+              <div class="container">
+                <h2>Milka gehani</h2>
+
+                <p>Milka Gehani Elpitiya Badalge Dona also known as Milka Gehani de Silva is a Sri Lankan artistic
+                  gymnast. She earned a continental quota spot to the 2020 Summer Olympics after the cancellation of the
+                  2021 Asian Championships. She was the first Sri Lankan gymnast across all disciplines to compete in
+                  the Olympics</p>
+                <p>milkagehani@workout.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 569 023</option>
+                      <option>076985457</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI_MuD5CrP3OIX1ivxtqoY3djOggvhIZXx2w&usqp=CAU"
+                alt="prasnna" style="width:100%">
+              <div class="container">
+                <h2>Pathum wikramage</h2>
+
+                <p>Pathum excelled in the corporate sector in Investment Banking, until he decided to ‘simplify’ his
+                  life. Today, he is a wanderer, explorer, bodybuilder and an avid personal fitness coach.Pathums’s
+                  passion for all things Sri Lankan sees him in wayward corners of the resplendent isle. Traveling
+                  often, Pathum explores caves, climbing sheer cliff mountains and treacherous ravines and it is no
+                  exaggeration that he has explored this little island we all call home, like no other. Pathum’s
+                  approach to life in general, and his personal coaching, is rather unique and he understands that if
+                  focused discipline sets in, then, half the battle is already won.</p>
+                <p>Pathumwikramage@gmail.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 895 467</option>
+                      <option>07663 369</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </body>
+
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="3.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="2.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="12.jpg" style="width:100%">
+
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+
+</html>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>our fitness coaches</title>
+  <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+  <!-- FOOTER -->
+  <footer class="section-footer" id="footer">
+    <div class="footer-box container">
+      <div class="contact-details">
+        <h2 class="margin-bottom"><span class="yellow">Universal </span>Fitness</h2>
+
+        <ul class="contact-data">
+          <li class="location">100 Nugegoda, Sri Lanka</li>
+          <li class="phone">+9411 4505500</li>
+          <li class="email">Universal@Fitness.com</li>
+          <li class="social">
+            <img src="logo-whatsapp.svg" alt="whatsapp icon" width="35" height="35" />
+
+            <img src="logo-facebook.svg" alt="facebook icon" width="35" height="35" />
+
+            <img src="logo-instagram.svg" alt="instagram icon" width="35" height="35" />
+
+            <img src="logo-twitter.svg" alt="twitter icon" width="35" height="35" />
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-nav" aria-label="navigation">
+        <div class="nav-name">Quick Links</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="newsletter">
+        <div class="newsletter__title">News Letter</div>
+        <div class="newsletter__text">
+          Want to Know what we're up to? Sign up for the newslatter,
+          and join oure tribe.
+        </div>
+        <form class="newsletter__input">
+          <input type="text" class="form" placeholder="Universal@Fitness.com" />
+          <img src="send.svg" alt="send icon" class="send-icon" width="36" height="36" />
+        </form>
+      </div>
+
+      <div class="legel">
+        <p class="text">Copyright &copy; 2023 Universal Fitness All Rights Reserved&nbsp;</p>
+        <a href="">
+          <img src="foot.png" alt="" class="github" width="35" height="35" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<hr>

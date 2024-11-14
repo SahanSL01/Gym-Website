@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>our fitness coaches</title>
+  <link rel="stylesheet" href="test.css">
+
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="home">
+    <div class="container">
+      <nav class="header-navigation" aria-label="navigation">
+        <div class="logo"><span class="yellow">Universal </span>| Fitness</div>
+
+        <img src="img/nav-icon.svg" alt="navigation icon" class="nav-icon" width="30" height="30" />
+
+        <ul>
+          <li>
+            <a href="../../index.php">Home</a>
+          </li>
+          <li>
+            <a href="../../AboutUs/About us second part.html">About</a>
+          </li>
+          <li>
+            <a href="../../index.php#courses">Courses</a>
+          </li>
+          <li>
+            <a href="../../index.php#trainers">Trainers</a>
+          </li>
+          <li>
+            <a href="../../index.php#contact">Contact</a>
+          </li>
+          <li class="">
+            <a href="../../Member/Become Member.php">Member</a>
+          </li>
+          <li class="member">
+            <a href="../../Admin-Panel/login.php">Admin</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</body>
+
+<body style="background-color:#262626;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #15317E;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #262626;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #262626;
+      color: white;
+    }
+
+    .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      border: none;
+      font-size: 17px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a,
+      .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid black;
+      }
+    }
+  </style>
+
+
+  <style>
+    #app {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      padding-bottom: 4vmin;
+      height: 90vh;
+      width: 100%;
+      background: #262626;
+      color: white;
+      font-family: Cambria;
+    }
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+    .title {
+      padding-left: 1em;
+
+
+
+      font-family: Georgia, serif;
+      font-size: 9vw;
+
+      width: 100%;
+      z-index: 2;
+
+      // start
+
+      >.title-inner {
+        display: inline-block;
+      }
+    }
+
+    @keyframes text-clip {
+      from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
+
+      to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    @keyframes outer-left {
+      from {
+        transform: translateX(50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    @keyframes inner-left {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    .cafe,
+    .mozart {
+      animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+      // outline: 1px solid red;
+    }
+
+    // [class*='inner'] {
+    //   outline: 1px solid blue;
+    // }
+
+    .title-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both;
+    }
+
+    .cafe-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both,
+        text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .mozart-inner {
+      animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .title {
+      animation: outer-left 1s 1s ease both;
+    }
+
+    .cafe {
+
+      // start
+      >.cafe-inner {
+        display: inline-block;
+      }
+    }
+
+    .mozart {
+      display: inline-block;
+    }
+
+    .image {
+      grid-row: 1;
+      grid-column: 2;
+
+      opacity: 0.7;
+
+      animation: image-in 1s cubic-bezier(0.4, 0, 0.1, 1) 2s backwards;
+
+      @keyframes image-in {
+        from {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        to {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      img {
+        display: block;
+        width: 200%;
+        height: auto;
+      }
+    }
+
+    // Replay animation!
+    body:active * {
+      animation: none !important;
+    }
+  </style>
+
+
+
+  <body>
+
+
+    <!-- <div class="iframe-embed" style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"><iframe src="https://dribbble.com/shots/15379368-Quick-Animation-Experiment/player" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="encrypted-media"></iframe></div> -->
+
+    <div id="app">
+      <div class="title">
+        <div class="title-inner">
+          <div class="cafe">
+            <div class="cafe-inner">our</div>
+          </div>
+          <div class="mozart">
+            <div class="mozart-inner">Fitness Coaches</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src='image 2.jpg' alt=''>
+      </div>
+    </div>
+
+    </head>
+
+
+    <style>
+      <style>.services {
+        padding-bottom: 3rem;
+      }
+
+      .services h1 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .services .services-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .services .services-box .box {
+        display: flex;
+        justify-content: space-between;
+        aling-items: center;
+        padding: 1rem 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        align-self: normal;
+        background: red;
+      }
+
+      .services .services-box .box:hover {
+        transform: scale(1.2);
+        z-index: 2;
+      }
+
+      .services .services-box .box .box-content h3 {
+        margin-bottom: .5rem;
+      }
+
+      .services .services-box .box i {
+        margin-right: 1.5rem;
+        color: #D90429;
+      }
+
+      .about {
+        background: #4c4c4c;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
+
+      .about .about-content {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .about .about-content .about-text {
+        flex: 1 1 50%;
+      }
+
+      .about .about-content .about-text h1 {
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+      }
+
+      .about .about-content .about-text p {
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+
+      .about .about-content .about-text a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #ffffff;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        color: #EDF2F4;
+        text-transform: uppercase;
+      }
+
+      .about .about-content .about-text a:hover {
+        background: https: //dminteriors.lk/wp-content/uploads/2020/02/Gym-interior-design-Sri-Lanka.jpg;
+          letter-spacing: .5rem;
+      }
+    </style>
+
+    <section class="hero">
+      <div class="hero-content">
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h1 style="color:white">
+            Mr.Chethiya Wadugodapitiya
+          </h1>
+          <p style="color:white">Chethiya is the owner of CW Nutrition & Fitness where he provides workout routines
+            geared to your fitness level. He also provides consultation for healthy and easy recipes which will help you
+            to loose fat, gain muscle and achieve overall well being.</p>
+          <div class="text-block">
+            <h4>Telephone
+              General - +94 112 674 815<br>
+
+              Maritime - +94 112 674 816<br></h4><br>
+            <p style="color:white">Mail - Hasitharaimmond@gmail.com<br>
+            </p><br>
+          </div>
+
+        </div>
+        <div class="about-img">
+          <style>
+
+          </style>
+          <img src="image.png" alt="">
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <center>
+
+
+      <hr>
+
+      <style>
+        <hr><style><style><style>html {
+          box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .title {
+          color: white;
+        }
+
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .button:hover {
+          background-color: #555;
+        }
+      </style>
+      </head>
+
+      <body>
+
+
+
+        <br>
+
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://www.justfit.lk/wp-content/uploads/2021/04/lalitha-epaarachchi-sri-lankan-fitness-influencer.jpg"
+                alt="vikum" style="width:100%">
+              <div class="container">
+                <h2>Vikum Kodithuwakku</h2>
+
+                <p>Vikum is a Personal Trainer and Sports Performance coach from the UK. He also has a bachelor’s degree
+                  in management through Manchester Metropolitan University. But having partaken in numerous sports
+                  through school and university such as boxing, cricket, badminton, football, rugby and basketball, he
+                  decided to pursue his passion and taking a leap into health & fitness industry. Having worked and
+                  studied in the UK, he has had the opportunity to work with and learn from some of the best coaches in
+                  the world.Through this he has been able to in his 10 plus years of being a fitness professional,
+                  worked with athletes in tennis, rugby and football and hundreds of clients, as well as develop and
+                  coach other trainers in the industry. In 2018 he took his experience and approach to performance
+                  driven training and designed his own concept to launch his very own studio in London named Onyx. He is
+                  currently in Sri Lanka offering classes at Trainyard (One Galle Face).
+                </p>
+                <p>vikum@gmail.com</p>
+                <p>Address: Colombo</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 568 965</option>
+                      <option>076985632</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwKiDPUR9qNkLsm6fjTFkbD3zmxmEN-Y9kBx-OdjKPr5Om3uj3rl8_yJPfSLRjaVb6HN4&usqp=CAU"
+                alt="Hass" style="width:100%">
+              <div class="container">
+                <h2>Hass Perera</h2>
+
+                <p>Hass is a former international rugby player, representing Sri Lanka in the national team for 4 years
+                  at second row (part of the team that won the Asian 5 Nations in 2013), as well as spells playing in
+                  France and Japan. He’s been working as a personal trainer and group fitness instructor since 2012, and
+                  has gained various qualifications since then, including the internationally recognised L2 Fitness
+                  Instructor certification. Hass has already supported hundreds of clients on their fitness and
+                  well-being journeys, and uses all of his experience to oversee their schedule. Always with a big
+                  smile, his passion for helping others is infectious.Hass is a former international rugby player,
+                  representing Sri Lanka in the national team for 4 years at second row (part of the team that won the
+                  Asian 5 Nations in 2013), as well as spells playing in France and Japan. He’s been working as a
+                  personal trainer and group fitness instructor since 2012</p>
+                <p>contact@workout.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 568 965</option>
+                      <option>076985632</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSElcXZLva64TPCDegVgXiWglScI2_toGbHQZtyYaGGA1uyGr_teq_LlNn_fBMs0nFQHes&usqp=CAU"
+                alt="Tharindu" style="width:100%">
+              <div class="container">
+                <h2>Tharindu Amunugama</h2>
+
+                <p>Tharindu excelled in the corporate sector in Investment Banking, until he decided to ‘simplify’ his
+                  life. Today, he is a wanderer, explorer, bodybuilder and an avid personal fitness coach. Tharindu’s
+                  passion for all things Sri Lankan sees him in wayward corners of the resplendent isle. Traveling
+                  often, Tharindu explores caves, climbing sheer cliff mountains and treacherous ravines and it is no
+                  exaggeration that he has explored this little island we all call home, like no other. Tharindu’s
+                  approach to life in general, and his personal coaching, is rather unique and he understands that if
+                  focused discipline sets in, then, half the battle is already won.</p>
+                <p>coachtharindu@gmail.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 568 965</option>
+                      <option>076985632</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <style>
+          .figure {
+            height: 400px;
+            position: relative;
+          }
+
+          .figure-caption {
+            background-color: #fff;
+            color: #000;
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            padding: 5px;
+            z-index: 1;
+          }
+
+          .figure-link:before {
+            content: "";
+            z-index: 5;
+            position: absolute;
+            display: block;
+            background: rgba(#f00, 0.25);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+        </style>
+
+        <body>
+
+
+        </body>
+
+</html>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> coach</title>
+  <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+  <!-- FOOTER -->
+  <footer class="section-footer" id="footer">
+    <div class="footer-box container">
+      <div class="contact-details">
+        <h2 class="margin-bottom"><span class="yellow">Universal </span>Fitness</h2>
+
+        <ul class="contact-data">
+          <li class="location">100 Nugegoda, Sri Lanka</li>
+          <li class="phone">+9411 4505500</li>
+          <li class="email">Universal@Fitness.com</li>
+          <li class="social">
+            <img src="logo-whatsapp.svg" alt="whatsapp icon" width="35" height="35" />
+
+            <img src="logo-facebook.svg" alt="facebook icon" width="35" height="35" />
+
+            <img src="logo-instagram.svg" alt="instagram icon" width="35" height="35" />
+
+            <img src="logo-twitter.svg" alt="twitter icon" width="35" height="35" />
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-nav" aria-label="navigation">
+        <div class="nav-name">Quick Links</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="newsletter">
+        <div class="newsletter__title">News Letter</div>
+        <div class="newsletter__text">
+          Want to Know what we're up to? Sign up for the newslatter,
+          and join oure tribe.
+        </div>
+        <form class="newsletter__input">
+          <input type="text" class="form" placeholder="Universal@Fitness.com" />
+          <img src="send.svg" alt="send icon" class="send-icon" width="36" height="36" />
+        </form>
+      </div>
+
+      <div class="legel">
+        <p class="text">Copyright &copy; 2023 Universal Fitness All Rights Reserved&nbsp;</p>
+        <a href="">
+          <img src="" alt="" class="github" width="35" height="35" />
+        </a>
+      </div>
+    </div>
+  </footer>
+  <hr>
+
+</body>

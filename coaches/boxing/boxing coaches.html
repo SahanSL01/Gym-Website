@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>our boxing coaches</title>
+  <link rel="stylesheet" href="test.css">
+
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="home">
+    <div class="container">
+      <nav class="header-navigation" aria-label="navigation">
+        <div class="logo"><span class="yellow">Universal </span>| Fitness</div>
+
+        <img src="img/nav-icon.svg" alt="navigation icon" class="nav-icon" width="30" height="30" />
+
+        <ul>
+          <li>
+            <a href="../../index.php">Home</a>
+          </li>
+          <li>
+            <a href="../../AboutUs/About us second part.html">About</a>
+          </li>
+          <li>
+            <a href="../../index.php#courses">Courses</a>
+          </li>
+          <li>
+            <a href="../../index.php#trainers">Trainers</a>
+          </li>
+          <li>
+            <a href="../../index.php#contact">Contact</a>
+          </li>
+          <li class="">
+            <a href="../../Member/Become Member.php">Member</a>
+          </li>
+          <li class="member">
+            <a href="../../Admin-Panel/login.php">Admin</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</body>
+
+<body style="background-color:#262626;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #15317E;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #262626;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #262626;
+      color: white;
+    }
+
+    .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      border: none;
+      font-size: 17px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a,
+      .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid black;
+      }
+    }
+  </style>
+
+
+  <style>
+    #app {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      padding-bottom: 4vmin;
+      height: 90vh;
+      width: 100%;
+      background: #262626;
+      color: white;
+      font-family: Cambria;
+    }
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+    .title {
+      padding-left: 1em;
+
+
+
+      font-family: Georgia, serif;
+      font-size: 9vw;
+
+      width: 100%;
+      z-index: 2;
+
+      // start
+
+      >.title-inner {
+        display: inline-block;
+      }
+    }
+
+    @keyframes text-clip {
+      from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      }
+
+      to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    @keyframes outer-left {
+      from {
+        transform: translateX(50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    @keyframes inner-left {
+      from {
+        transform: translateX(-50%);
+      }
+
+      to {
+        transform: none;
+      }
+    }
+
+    .cafe,
+    .mozart {
+      animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+      // outline: 1px solid red;
+    }
+
+    // [class*='inner'] {
+    //   outline: 1px solid blue;
+    // }
+
+    .title-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both;
+    }
+
+    .cafe-inner {
+      display: inline-block;
+      animation: inner-left 1s 1s ease both,
+        text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .mozart-inner {
+      animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    }
+
+    .title {
+      animation: outer-left 1s 1s ease both;
+    }
+
+    .cafe {
+
+      // start
+      >.cafe-inner {
+        display: inline-block;
+      }
+    }
+
+    .mozart {
+      display: inline-block;
+    }
+
+    .image {
+      grid-row: 1;
+      grid-column: 2;
+
+      opacity: 0.7;
+
+      animation: image-in 1s cubic-bezier(0.4, 0, 0.1, 1) 2s backwards;
+
+      @keyframes image-in {
+        from {
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        to {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+
+      img {
+        display: block;
+        width: 200%;
+        height: auto;
+      }
+    }
+
+    // Replay animation!
+    body:active * {
+      animation: none !important;
+    }
+  </style>
+
+
+
+  <body>
+
+
+    <!-- <div class="iframe-embed" style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 75%;"><iframe src="https://dribbble.com/shots/15379368-Quick-Animation-Experiment/player" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" allowfullscreen allow="encrypted-media"></iframe></div> -->
+
+    <div id="app">
+      <div class="title">
+        <div class="title-inner">
+          <div class="cafe">
+            <div class="cafe-inner">our</div>
+          </div>
+          <div class="mozart">
+            <div class="mozart-inner">Boxing Coaches</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <img
+          src='https://media.istockphoto.com/id/672116290/photo/sportsman-muay-thai-boxer-fighting-in-gloves-in-boxing-cage-isolated-on-black-background-with.jpg?s=612x612&w=0&k=20&c=6NNdFPZi_csl1kOL6WOBfeAxmA97Ypc6Db8Jt3pT4DM='
+          alt=''>
+      </div>
+    </div>
+
+    </head>
+
+
+    <style>
+      <hr><style>.services {
+        padding-bottom: 3rem;
+      }
+
+      .services h1 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .services .services-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .services .services-box .box {
+        display: flex;
+        justify-content: space-between;
+        aling-items: center;
+        padding: 1rem 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        align-self: normal;
+        background: red;
+      }
+
+      .services .services-box .box:hover {
+        transform: scale(1.2);
+        z-index: 2;
+      }
+
+      .services .services-box .box .box-content h3 {
+        margin-bottom: .5rem;
+      }
+
+      .services .services-box .box i {
+        margin-right: 1.5rem;
+        color: #D90429;
+      }
+
+      .about {
+        background: #4c4c4c;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+      }
+
+      .about .about-content {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .about .about-content .about-text {
+        flex: 1 1 50%;
+      }
+
+      .about .about-content .about-text h1 {
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+      }
+
+      .about .about-content .about-text p {
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: #fff;
+      }
+
+      .about .about-content .about-text a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #ffffff;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        color: #EDF2F4;
+        text-transform: uppercase;
+      }
+
+      .about .about-content .about-text a:hover {
+        background: https: //dminteriors.lk/wp-content/uploads/2020/02/Gym-interior-design-Sri-Lanka.jpg;
+          letter-spacing: .5rem;
+      }
+    </style>
+
+    <section class="hero">
+      <div class="hero-content">
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h1 style="color:white">
+            Mr.Suranga Karunarathna
+          </h1>
+          <p style="color:white">Suranga is the owner of CW Nutrition & Fitness where he provides workout routines
+            geared to your fitness level. He also provides consultation for healthy and easy recipes which will help you
+            to loose fat, gain muscle and achieve overall well being.He is the grant boxing coach of our gym.</p>
+          <div class="text-block">
+            <h4>Telephone
+              General - +94 11585631<br>
+
+              Maritime - +94 112 589 254<br></h4><br>
+            <p style="color:white">Mail - Karunarathna@gmail.com<br>
+            </p><br>
+          </div>
+
+        </div>
+        <div class="about-img">
+          <style>
+
+          </style>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhUN_3XeGFwKXfwnw4EAi26OrQFKkC4K_3Q&usqp=CAU"
+            alt="">
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <center>
+
+
+      <hr>
+      <style>
+        html {
+          box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .title {
+          color: white;
+        }
+
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .button:hover {
+          background-color: #555;
+        }
+      </style>
+      </head>
+
+      <body>
+
+        <h2 style="color:white">Other Coaches</h2>
+
+        <br>
+
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="supun" style="width:100%">
+              <div class="container">
+                <h2>Supun Tharaka</h2>
+
+                <p>Supun is a Personal Trainer and Sports Performance coach from the UK. He also has a bachelor’s degree
+                  in management through Manchester Metropolitan University. But having partaken in numerous sports
+                  through school and university such as boxing, cricket, badminton, football, rugby and basketball, he
+                  decided to pursue his passion and taking a leap into health & fitness industry. Having worked and
+                  studied in the UK, he has had the opportunity to work with and learn from some of the best coaches in
+                  the world.Through this he has been able to in his 10 plus years of being a fitness professional,
+                  worked with athletes in tennis, rugby and football and hundreds of clients, as well as develop and
+                  coach other trainers in the industry. In 2018 he took his experience and approach to performance
+                  driven training and designed his own concept to launch his very own studio in London named Onyx. He is
+                  currently in Sri Lanka offering classes at Trainyard (One Galle Face).
+                </p>
+                <p>supun tharaka@gmail.com</p>
+                <p>Address: Colombo</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 545 496</option>
+                      <option>07613698</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcj4t_fMCtl1E18TGWVVNSjDikeSuQnLNuZg&usqp=CAU"
+                alt="Abdullah" style="width:100%">
+              <div class="container">
+                <h2>Abdullah haris</h2>
+
+                <p>Abdullah is a former international rugby player, representing Sri Lanka in the national team for 4
+                  years at second row (part of the team that won the Asian 5 Nations in 2013), as well as spells playing
+                  in France and Japan. He’s been working as a personal trainer and group fitness instructor since 2012,
+                  and has gained various qualifications since then, including the internationally recognised L2 Fitness
+                  Instructor certification. Hass has already supported hundreds of clients on their fitness and
+                  well-being journeys, and uses all of his experience to oversee their schedule. Always with a big
+                  smile, his passion for helping others is infectious.Hass is a former international rugby player,
+                  representing Sri Lanka in the national team for 4 years at second row (part of the team that won the
+                  Asian 5 Nations in 2013), as well as spells playing in France and Japan. He’s been working as a
+                  personal trainer and group fitness instructor since 2012</p>
+                <p>abdullah@workout.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 568 965</option>
+                      <option>076985632</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="prasnna" style="width:100%">
+              <div class="container">
+                <h2>Prasanna Dewappriya</h2>
+
+                <p>prasanna excelled in the corporate sector in Investment Banking, until he decided to ‘simplify’ his
+                  life. Today, he is a wanderer, explorer, bodybuilder and an avid personal fitness coach. Prasanna’s
+                  passion for all things Sri Lankan sees him in wayward corners of the resplendent isle. Traveling
+                  often, Prasanna explores caves, climbing sheer cliff mountains and treacherous ravines and it is no
+                  exaggeration that he has explored this little island we all call home, like no other. Prasanna’s
+                  approach to life in general, and his personal coaching, is rather unique and he understands that if
+                  focused discipline sets in, then, half the battle is already won.</p>
+                <p>Dewappriya@gmail.com</p>
+                <tr>
+                  <td><b>Contact</b></td>
+                  <td><select>
+                      <option>-choose the number</option>
+                      <option>+94 895265</option>
+                      <option>07663354</option>
+                      <option></option>
+                    </select></td>
+                </tr>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </body>
+
+</html>
+<hr>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWvqDMZ_w6JAprxSR-eoCAdzb44cNZYsCXQ&usqp=CAU"
+        style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4fT6RlCfgWL0_YSCPrTT0N_j56x1Nerm7w&usqp=CAU"
+        style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRVmvWoZ2-9EYctaREaLqCA-l4pxP7CcBDLhFkiUlXg164OlXYRUF3OQ2-DgPvAP0tEU&usqp=CAU"
+        style="width:100%">
+
+    </div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+
+</html>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>our fitness coaches</title>
+  <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+
+  <!-- FOOTER -->
+  <footer class="section-footer" id="footer">
+    <div class="footer-box container">
+      <div class="contact-details">
+        <h2 class="margin-bottom"><span class="yellow">Universal </span>Fitness</h2>
+
+        <ul class="contact-data">
+          <li class="location">100 Nugegoda, Sri Lanka</li>
+          <li class="phone">+9411 4505500</li>
+          <li class="email">Universal@Fitness.com</li>
+          <li class="social">
+            <img src="logo-whatsapp.svg" alt="whatsapp icon" width="35" height="35" />
+
+            <img src="logo-facebook.svg" alt="facebook icon" width="35" height="35" />
+
+            <img src="logo-instagram.svg" alt="instagram icon" width="35" height="35" />
+
+            <img src="logo-twitter.svg" alt="twitter icon" width="35" height="35" />
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-nav" aria-label="navigation">
+        <div class="nav-name">Quick Links</div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="newsletter">
+        <div class="newsletter__title">News Letter</div>
+        <div class="newsletter__text">
+          Want to Know what we're up to? Sign up for the newslatter,
+          and join oure tribe.
+        </div>
+        <form class="newsletter__input">
+          <input type="text" class="form" placeholder="Universal@Fitness.com" />
+          <img src="send.svg" alt="send icon" class="send-icon" width="36" height="36" />
+        </form>
+      </div>
+
+      <div class="legel">
+        <p class="text">Copyright &copy; 2023 Universal Fitness All Rights Reserved&nbsp;</p>
+        <a href="">
+          <img src="" alt="" class="github" width="35" height="35" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
+<hr>
